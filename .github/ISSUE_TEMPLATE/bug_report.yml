@@ -1,0 +1,79 @@
+name: Bug Report
+description: Report a defect or unexpected behavior
+title: "[Bug] "
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐛 Bug Report
+        Please provide enough information so we can reproduce and fix the issue efficiently.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the issue clearly and concisely.
+      placeholder: When I click "Save", the page crashes with a 500 error.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      placeholder: The data should be saved and I should see a success message.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide a step-by-step description so we can reproduce the issue.
+      placeholder: |
+        1. Go to ...
+        2. Click on ...
+        3. Enter ...
+        4. See error ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severe is the issue?
+      options:
+        - Critical (System unusable / data loss)
+        - High (Major feature broken)
+        - Medium (Workaround exists)
+        - Low (Minor issue / cosmetic)
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, OS, app version, etc.
+      placeholder: Chrome 121 / macOS 14 / App v1.3.2
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or screenshots
+      description: Paste logs or drag screenshots here.
+      render: shell
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have searched for existing issues
+          required: true
+        - label: I have provided enough information to reproduce the issue
+          required: true
