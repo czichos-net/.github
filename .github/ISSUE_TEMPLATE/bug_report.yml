@@ -1,7 +1,8 @@
 name: Bug Report
 description: Report a defect or unexpected behavior
-title: "[Bug] "
+title: ""
 labels: ["bug"]
+type: bug
 assignees: []
 
 body:
@@ -67,13 +68,3 @@ body:
       label: Relevant logs or screenshots
       description: Paste logs or drag screenshots here.
       render: shell
-
-  - type: checkboxes
-    id: checklist
-    attributes:
-      label: Before submitting
-      options:
-        - label: I have searched for existing issues
-          required: true
-        - label: I have provided enough information to reproduce the issue
-          required: true
