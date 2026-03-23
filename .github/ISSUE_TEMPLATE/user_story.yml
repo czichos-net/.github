@@ -1,0 +1,76 @@
+name: User Story
+description: Describe a user-facing feature or improvement from the end user's perspective
+title: "<title>"
+labels: []
+type: User Story
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 👤 User Story
+        Describe the feature from the user's perspective so the team can understand the value and expected outcome.
+
+  - type: textarea
+    id: story
+    attributes:
+      label: User story
+      description: Use the standard format if possible.
+      placeholder: As a user, I want to save drafts automatically so that I do not lose my work.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why is this needed? What problem does it solve?
+      placeholder: Users currently lose unsaved input when the page reloads or the session expires.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Define the conditions that must be met for this story to be complete.
+      placeholder: |
+        - Drafts are saved automatically every 30 seconds
+        - Users can restore the latest draft after reopening the page
+        - A visible indicator shows when the draft was last saved
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this story?
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of scope
+      description: Clarify what is explicitly not included in this story.
+      placeholder: Cross-device draft sync is not part of this story.
+
+  - type: input
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Link related issues, epics, or external dependencies.
+      placeholder: Epic #123, API support for draft persistence
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Any extra details, mockups, or references.
