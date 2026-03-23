@@ -1,6 +1,6 @@
 name: Bug Report
 description: Report a defect or unexpected behavior
-title: " "
+title: "<title>"
 labels: ["bug"]
 type: bug
 assignees: []
