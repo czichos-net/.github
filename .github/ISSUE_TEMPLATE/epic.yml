@@ -1,0 +1,100 @@
+name: Epic
+description: Track a larger initiative composed of multiple stories or tasks
+title: "<title>"
+labels: ["epic"]
+type: feature
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🧭 Epic
+        Use this template for a larger initiative that spans multiple stories, technical tasks, or teams.
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What is the overall objective of this epic?
+      placeholder: Improve onboarding so new users can complete setup faster and with less support.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What problem are we trying to solve?
+      placeholder: New users drop off during onboarding because the current process is too long and unclear.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What is included in this epic?
+      placeholder: |
+        - Redesign onboarding flow
+        - Add progress tracking
+        - Improve email verification UX
+        - Add analytics for funnel drop-off
+    validations:
+      required: true
+
+  - type: textarea
+    id: success
+    attributes:
+      label: Success criteria
+      description: How will we know this epic is successful?
+      placeholder: |
+        - Onboarding completion rate increases by 20%
+        - Support requests related to setup decrease
+        - Average time to complete onboarding is reduced
+    validations:
+      required: true
+
+  - type: textarea
+    id: child_issues
+    attributes:
+      label: Related stories and tasks
+      description: List or link the stories, technical tasks, and bugs related to this epic.
+      placeholder: |
+        - User Story #101
+        - User Story #102
+        - Technical Story #103
+        - Bug #104
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this epic?
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: input
+    id: owner
+    attributes:
+      label: Owner
+      description: Team or person responsible for driving the epic.
+      placeholder: Product Team / @username
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks / dependencies
+      description: Known risks, assumptions, or dependencies.
+      placeholder: Depends on design availability and backend support for onboarding state persistence.
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Any supporting context, links, or references.
