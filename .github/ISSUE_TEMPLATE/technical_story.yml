@@ -1,0 +1,90 @@
+name: Technical Story
+description: Describe engineering work that improves the system without being directly phrased as an end-user feature
+title: "<title>"
+labels: []
+type: Technical Story
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚙️ Technical Story
+        Describe the technical improvement clearly so implementation details, motivation, and constraints are understood.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What needs to be done?
+      description: Summarize the technical change.
+      placeholder: Refactor the authentication module to support token rotation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why is this needed?
+      description: Explain the technical motivation, risks, or current limitations.
+      placeholder: The current implementation does not support token rotation, increasing security risk and making session handling harder to maintain.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope of work
+      description: List the expected technical changes.
+      placeholder: |
+        - Update token generation and validation flow
+        - Add refresh token persistence
+        - Adjust middleware for rotated tokens
+        - Add tests for expiration and reuse cases
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Define when this technical story is considered complete.
+      placeholder: |
+        - Token rotation is implemented for all login flows
+        - Existing sessions remain compatible or are migrated safely
+        - Automated tests cover success and failure scenarios
+        - Documentation is updated
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this work?
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: input
+    id: components
+    attributes:
+      label: Affected components
+      description: Services, modules, repositories, or infrastructure involved.
+      placeholder: auth-service, api-gateway, shared security library
+
+  - type: input
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Link related issues, epics, or blockers.
+      placeholder: Epic #456, depends on schema migration
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional technical notes
+      description: Constraints, migration concerns, rollout notes, or references.
