@@ -28,7 +28,7 @@ body:
       description: Explain the technical motivation, risks, or current limitations.
       placeholder: The current implementation does not support token rotation, increasing security risk and making session handling harder to maintain.
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: scope
@@ -41,7 +41,7 @@ body:
         - Adjust middleware for rotated tokens
         - Add tests for expiration and reuse cases
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: acceptance
@@ -54,34 +54,7 @@ body:
         - Automated tests cover success and failure scenarios
         - Documentation is updated
     validations:
-      required: true
-
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Priority
-      description: How important is this work?
-      options:
-        - Critical
-        - High
-        - Medium
-        - Low
-    validations:
-      required: true
-
-  - type: input
-    id: components
-    attributes:
-      label: Affected components
-      description: Services, modules, repositories, or infrastructure involved.
-      placeholder: auth-service, api-gateway, shared security library
-
-  - type: input
-    id: dependencies
-    attributes:
-      label: Dependencies
-      description: Link related issues, epics, or blockers.
-      placeholder: Epic #456, depends on schema migration
+      required: false
 
   - type: textarea
     id: notes
